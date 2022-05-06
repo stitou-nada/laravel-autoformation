@@ -16,7 +16,7 @@
             <a class="nav-link" href="/about">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact">Contact Us</a>
+            <a class="nav-link" href="/contact">Contact Us</a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
