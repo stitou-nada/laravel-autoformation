@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Laravel extends Model
 {
+
     use HasFactory;
     protected $table = 'laravels';
 }

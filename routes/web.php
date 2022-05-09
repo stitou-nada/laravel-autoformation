@@ -38,5 +38,11 @@ Route::get('/contact', function () {
 route::get('/tutorials',[TutorialController::class,'index']);
 
 
+//  insert les donnes
+route::get('/crud',[TutorialControllerr::class,'insert']);
+
+
+
+
 route::get('/testt',[TestController::class,'index']);
  

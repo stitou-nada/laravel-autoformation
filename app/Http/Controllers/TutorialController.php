@@ -13,4 +13,10 @@ class TutorialController extends Controller
         $tutos= Laravel::all();
         return view('pages.Tutorials', compact('tutos'));
     }
+public function insert(){
+    $person = new laravel();
+    $person->namee="nadaaa";
+    $insert =$person->save();
+    return view ("test/crud",compact('insert'));
+}
 }
