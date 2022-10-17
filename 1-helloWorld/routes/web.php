@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\testContoller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +13,12 @@ use App\Http\Controllers\testContoller;
 |
 */
 
-Route::get('/test', function () {
-    return view('test');
+Route::get('/', function () {
+    return view('welcome');
 });
-Route::get('/test',[testContoller::class,"test"]);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
