@@ -30,6 +30,6 @@ Route::match(['get','post'],'/page',function(){
 
 // Methode any
 
-Route::any(('/'),function(){
-
+Route::any(('/pages'),function(){
+ return('helle tous le monde');
 });
