@@ -57,4 +57,4 @@ Route::any('/csrf',function(request $request){
  
  //Route redirect
 
- Route::redirect('/here', '/there');
+ Route::redirect('/he', '/pages');
