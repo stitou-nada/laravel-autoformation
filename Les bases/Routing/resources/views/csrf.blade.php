@@ -4,7 +4,8 @@
     
 </head>
 <body>
-    <form action="user">
+    <form  method="GET" action="csrf">
+         @csrf
         <input type="text" name="name">
         <button>Ajouter</button>
     </form>

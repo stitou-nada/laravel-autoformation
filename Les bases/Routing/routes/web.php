@@ -44,3 +44,13 @@ Route::get('/user',function(request $request){
    return  $request->input("name");
    
 });
+
+//Protection CSRF
+Route::get('/profile',function(){
+    return view('csrf');
+});
+
+Route::any('/csrf',function(request $request){
+    return  $request->input("name");
+    
+ });
