@@ -13,11 +13,11 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+    //  route basic
 // Route::get('/index', function () {
 //     return ('hello world');
 // });
 
 
-        // Les fichiers de routage par défaut
+        //Route avec controller
 Route::get('/index',[UserController::class,'index']);
