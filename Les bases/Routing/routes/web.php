@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,14 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-    //  route basic
-// Route::get('/index', function () {
-//     return ('hello world');
-// });
+//  route basic
+Route::get('/index', function () {
+    return('hello world');
+});
 
 
-        //Route avec controller
-Route::get('/index',[UserController::class,'index']);
+//Route avec controller
+Route::get('/hello',[UserController::class,'index']);
 
 // Methode match 
 
@@ -32,4 +33,14 @@ Route::match(['get','post'],'/page',function(){
 
 Route::any(('/pages'),function(){
  return('helle tous le monde');
+});
+
+//Route request
+Route::any(('/input'),function(){
+    return view('input');
+   });
+
+Route::get('/user',function(request $request){
+   return  $request->input("name");
+   
 });
