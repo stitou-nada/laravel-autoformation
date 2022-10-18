@@ -62,3 +62,8 @@ Route::any('/csrf',function(request $request){
  // Route view
 
  Route::view('/hey', 'index');
+ 
+// Parametre request
+ Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+});
