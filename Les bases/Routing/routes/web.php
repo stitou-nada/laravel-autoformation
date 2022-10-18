@@ -88,3 +88,7 @@ Route::get('/num/{id}', function ($id) {
     return $id;
 })->where('id', '[0-9]+');
  
+
+Route::get('/search/{search}', function ($search) {
+    return $search;
+})->where('search', '.*');
