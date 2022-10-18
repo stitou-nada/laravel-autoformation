@@ -21,3 +21,15 @@ use App\Http\Controllers\UserController;
 
         //Route avec controller
 Route::get('/index',[UserController::class,'index']);
+
+// Methode match 
+
+Route::match(['get','post'],'/page',function(){
+  return('nada');
+});
+
+// Methode any
+
+Route::any(('/'),function(){
+
+});
