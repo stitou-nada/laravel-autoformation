@@ -54,3 +54,7 @@ Route::any('/csrf',function(request $request){
     return  $request->input("name");
     
  });
+ 
+ //Route redirect
+
+ Route::redirect('/here', '/there');
