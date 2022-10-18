@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/index', function () {
-    return ('hello world');
-});
+// Route::get('/index', function () {
+//     return ('hello world');
+// });
+
+
+        // Les fichiers de routage par défaut
+Route::get('/index',[UserController::class,'index']);
