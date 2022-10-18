@@ -63,7 +63,28 @@ Route::any('/csrf',function(request $request){
 
  Route::view('/hey', 'index');
  
+
 // Parametre request
  Route::get('/user/{id}', function ($id) {
     return 'User '.$id;
 });
+
+//Paramètres facultatifs
+
+Route::get('/user/{name?}',function($name= null){
+   return $name;
+});
+
+Route::get('/use/{name?}', function ($name = 'John') {
+    return $name;
+});
+// Contraintes d'expression régulière
+Route::get('/hello/{name}', function ($name) {
+    return $name;
+})->where('name', '[A-Za-z]+');
+
+
+Route::get('/num/{id}', function ($id) {
+    return $id;
+})->where('id', '[0-9]+');
+ 
