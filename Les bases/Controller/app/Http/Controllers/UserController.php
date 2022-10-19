@@ -19,9 +19,4 @@ class UserController extends Controller
    
  }
 
- //exmple 3
-    public function __invoke()
-    {
-        return 'This is an invokable controller';
-    }
 }
