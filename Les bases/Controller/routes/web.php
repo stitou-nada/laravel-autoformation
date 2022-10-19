@@ -18,5 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Contrôleurs à simple action
+//controller
+Route::get('/user',[UserController::class,'afficher']);
+
+//Contrôller à simple action
 Route::get('/invokable',UserController::class);
