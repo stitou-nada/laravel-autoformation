@@ -20,10 +20,17 @@ Route::get('/', function () {
 
 //Accessing The Request
 
-//Request form 
+//exmple 1 :Request form 
 Route::get('/index', function () {
     return view('form');
 });
 Route::any("Request",[UserController::class,"index"]);
 
+
+ //exmple 2 : par id
+
+ Route::get('/formPerson', function () {
+    return view('formPerson');
+    });
+Route::any("Person/{id}",[UserController::class,"findId"]);
 
