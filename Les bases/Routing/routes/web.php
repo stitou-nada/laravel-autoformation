@@ -36,7 +36,7 @@ Route::any(('/pages'),function(){
 });
 
 //Route request
-Route::any(('/input'),function(){
+Route::get('/input',function(){
     return view('input');
    });
 
