@@ -18,8 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//controller
+//exmple 1
 Route::get('/user',[UserController::class,'afficher']);
+
+//exmple 2
+Route::get('/page',[UserController::class,'index']);
 
 //Contrôller à simple action
 Route::get('/invokable',UserController::class);
