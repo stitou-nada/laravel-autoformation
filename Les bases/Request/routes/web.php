@@ -20,7 +20,10 @@ Route::get('/', function () {
 
 //Accessing The Request
 
+//Request form 
 Route::get('/index', function () {
     return view('form');
 });
 Route::any("Request",[UserController::class,"index"]);
+
+
