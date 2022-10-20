@@ -9,7 +9,7 @@
 
 ## Les Commandes pour Exécution de migrations
    - Pour crée migration avec les fonction :
-     #php artisan make:migration create_flights_table  
+     #php artisan make:migration create_flights_table  (flihghts:cette nom en peut modifier)
    - Pour exécuter toutes vos migrations :
     #php artisan migrate
    - Si vous souhaitez voir quelles migrations ont été exécutées : 
