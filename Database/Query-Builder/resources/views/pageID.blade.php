@@ -1,0 +1,1 @@
+<h1>{{$users->name_promotion}}</h1>

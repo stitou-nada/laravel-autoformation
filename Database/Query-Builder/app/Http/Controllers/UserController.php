@@ -1,0 +1,59 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\DB;
+
+class UserController extends Controller
+{
+
+    // exmple 1 
+    public function index()
+    {
+        $users = DB::table('promotion')->get();
+         
+        return view('index',compact('users'));
+    }
+
+    // exmple 2
+
+    public function afficher()
+    {
+        $users = DB::table('promotion')
+        ->where('id_promotion',1)
+        ->get();
+
+        return view('index',compact('users'));
+    }
+
+
+    // exmple 3 
+    public function first()
+    {
+        $users = DB::table('promotion')
+        ->first();
+        
+ 
+        return view('pageID',compact('users'));
+    }
+    // exmple 4 
+    public function count()
+    {
+        $users = DB::table('promotion')->count();
+        return view('index',compact('users'));
+    }
+    // exmple 5 
+    public function max()
+    {
+        // $users = DB::table('promotion')->min('id_promotion');
+        $users = DB::table('promotion')->max('id_promotion');
+        return view('index',compact('users'));
+    }
+
+
+}
+
+
+
