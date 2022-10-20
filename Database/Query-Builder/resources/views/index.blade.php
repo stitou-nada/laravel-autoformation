@@ -1,3 +1,6 @@
 
-<h1>{{$users}}</h1>
+
+@foreach ($users as $value)
+    <h1>{{$value->name_promotion}}</h1>
+@endforeach
 

@@ -19,10 +19,10 @@ class UserController extends Controller
 
     // exmple 2
 
-    public function afficher()
+    public function afficher($id)
     {
         $users = DB::table('promotion')
-        ->where('id_promotion',1)
+        ->where('id_promotion',$id)
         ->get();
 
         return view('index',compact('users'));
@@ -91,6 +91,7 @@ class UserController extends Controller
             ->crossJoin('promotion')
             ->get();
          
+            
          return view('index',compact('users'));
 
      }

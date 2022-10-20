@@ -20,7 +20,7 @@ Route::get('/', function () {
 // exmple 1 
 Route::get('/index',[UserController::class,'index']);
 // exmple 2
-Route::get('/page',[UserController::class,'afficher']);
+Route::get('/page/{id}',[UserController::class,'afficher']);
 // exmple 3
 Route::get('/first',[UserController::class,'first']);
 // exmple 4
