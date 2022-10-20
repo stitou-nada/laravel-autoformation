@@ -27,3 +27,5 @@ Route::get('/first',[UserController::class,'first']);
 Route::get('/count',[UserController::class,'count']);
 // exmple 5
 Route::get('/max',[UserController::class,'max']);
+// exmple 6 (select)
+Route::get('/select',[UserController::class,'selecte']);

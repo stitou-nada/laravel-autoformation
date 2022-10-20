@@ -51,6 +51,15 @@ class UserController extends Controller
         $users = DB::table('promotion')->max('id_promotion');
         return view('index',compact('users'));
     }
+    // exmple 6 (selecet statment)
+    public function selecte()
+    {
+        $users = DB::table('promotion')
+            ->select('name_promotion')
+            ->get();
+        return view('index',compact('users'));
+    }
+
 
 
 }
