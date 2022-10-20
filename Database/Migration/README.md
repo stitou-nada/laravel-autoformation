@@ -1,5 +1,8 @@
 <h1 style="color:#blue">Les commande</h1>
-## Exécution de migrations
+ <h2>Exécution de migrations</h2>
+ <p>php artisan migrate</p>
+ <p>php artisan migrate:status</p>
+
 
 
 
