@@ -31,3 +31,5 @@ Route::get('/max',[UserController::class,'max']);
 Route::get('/select',[UserController::class,'selecte']);
 // exmple 7 (join)
 Route::get('/join',[UserController::class,'join']);
+// exmple 8 (left join)
+Route::get('/join-left',[UserController::class,'LeftJoin']);

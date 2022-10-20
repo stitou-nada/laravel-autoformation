@@ -72,6 +72,19 @@ class UserController extends Controller
          return view('index',compact('users'));
 
      }
+    //exmple 8 (JOIN-left)
+     public function LeftJoin()
+     {
+
+        $users = DB::table('person')
+        ->leftJoin('promotion', 'person.Name_promotion', '=', 'promotion.id_promotion')
+        ->get();
+         
+         return view('index',compact('users'));
+
+     }
+
+
     }
 
 
