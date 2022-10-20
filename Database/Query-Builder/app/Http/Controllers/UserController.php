@@ -83,6 +83,18 @@ class UserController extends Controller
          return view('index',compact('users'));
 
      }
+    //exmple 9 (Cross JOIN)
+     public function CrossJoin()
+     {
+
+        $users = DB::table('person')
+            ->crossJoin('promotion')
+            ->get();
+         
+         return view('index',compact('users'));
+
+     }
+     
 
 
     }

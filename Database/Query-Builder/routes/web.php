@@ -33,3 +33,5 @@ Route::get('/select',[UserController::class,'selecte']);
 Route::get('/join',[UserController::class,'join']);
 // exmple 8 (left join)
 Route::get('/join-left',[UserController::class,'LeftJoin']);
+// exmple 9 (cross join)
+Route::get('/crossJoin',[UserController::class,'CrossJoin']);
