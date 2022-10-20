@@ -60,9 +60,19 @@ class UserController extends Controller
         return view('index',compact('users'));
     }
 
+    //exmple 7 (JOIN)
+     public function join()
+     {
 
+         $users = DB::table('person')
+         ->join('promotion', 'person.Name_promotion', '=', 'promotion.id_promotion')
+         ->select('person.*', 'promotion.name_promotion')
+         ->get();
+         
+         return view('index',compact('users'));
 
-}
+     }
+    }
 
 
 
