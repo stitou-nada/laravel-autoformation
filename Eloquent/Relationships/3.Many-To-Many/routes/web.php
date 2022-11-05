@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\promotion;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// many to many
+
+route::get('/many',[promotion::class,'belongsToMany']);
+route::get('/belongsTo',[promotion::class,'belongsTo']);
