@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class apprenant extends Model
 {
+    protected $table = 'apprenant';
+
     public function promotion(){
         return $this->belongsTo(promotion::class);
     }
 }
+ 

@@ -11,7 +11,9 @@ class promotionController extends Controller
     //  one to one
     public function hasOne()
     {
+
         $data = promotion::find(1)->HasOneapprenant;
+        
         return view('index',compact('data')) ;
     }
 }
