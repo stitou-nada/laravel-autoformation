@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use App\Http\Controllers\promotionController;
 use Illuminate\Support\Facades\Route;
@@ -19,11 +19,12 @@ Route::get('/', function () {
 });
 
 // One to one
-route::get('hasOne',[promotionController::class,"hasOne"]);
+route::get('hasOne/',[promotionController::class,"hasOne"]);
 
 // one to many
 route::get('/hasMany',[promotionController::class,'hasMany']);
 
+// belongsto
+route::get('/belongsTo',[promotionController::class,'belongsTo']);
 // many to many
-route::get('/many',[promotion::class,'belongsToMany']);
-route::get('/belongsTo',[promotion::class,'belongsTo']);
+route::get('/ManyToMany',[promotionController::class,'ManyToMany']);

@@ -11,7 +11,7 @@ class promotion extends Model
   protected $table = 'promotion';
 
       // one to one
-      function HasOneApprenant(){
+      function HasOneapprenant(){
         return $this->hasOne(apprenant::class);
       }
 

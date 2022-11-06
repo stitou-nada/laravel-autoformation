@@ -13,30 +13,27 @@ class promotionController extends Controller
     {
 
         $data = promotion::find(1)->HasOneapprenant;
-        
-        return view('index',compact('data')) ;
+        return $data ;
     }
 
       //  one to many
       public function hasMany()
       {
           $data = promotion::find(1)->HasManyapprenant ;
-          return view('index',compact('data'))  ;
+          return $data ;
       }
 
-      //many to many
+      //belongsto
 
     public function belongsTo()
     {
-        $data = apprenant::find(2);
-        return $data->promotion .$data  ;
+        $data = apprenant::find(3);
+        return $data->promotion  ;
     }
 
-    public function belongsToMany(){
+    public function ManyToMany(){
 
-        $user = promotion::find(2);
-
-            // dd($user->apprenant);
-            return $user->apprenant .$user ;
+          $user = promotion::find(3)->apprenant;
+            return $user;
     }
 }
