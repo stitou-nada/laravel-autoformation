@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class apprenant extends Model
 {
     protected $table = 'apprenant';
-    
+
     // one to one , one to many
     public function promotion(){
         return $this->belongsTo(promotion::class);
@@ -20,6 +20,5 @@ class apprenant extends Model
     public function promotions(){
     return $this->belongsToMany(promotion::class);
     }
-    
+
 }
- 

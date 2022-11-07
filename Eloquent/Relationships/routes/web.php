@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 // One to one
-route::get('hasOne/',[promotionController::class,"hasOne"]);
+route::get('/hasOne',[promotionController::class,"hasOne"]);
 
 // one to many
 route::get('/hasMany',[promotionController::class,'hasMany']);
