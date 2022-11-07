@@ -18,6 +18,11 @@ class promotion extends Model
     }
 
     // one to many
+      public function hasManyApprenant(){
+        return $this->hasMany(apprenant::class);
+      }
+
+
 
 
 }

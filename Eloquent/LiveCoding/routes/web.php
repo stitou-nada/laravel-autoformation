@@ -23,3 +23,7 @@ Route::get('/hasOne',[PromotionController::class,'hasOne']);
 // belongsTo
 
 Route::get('/belongsTo',[PromotionController::class,'belongsTo']);
+
+// one to many
+
+Route::get('/hasMany',[PromotionController::class,'hasMany']);

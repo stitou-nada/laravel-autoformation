@@ -23,4 +23,15 @@ class PromotionController extends Controller
 
         return $data;
     }
+
+    // one TO Many
+
+    public function hasMany(){
+        $data = promotion::find(1);
+        $data->hasManyApprenant;
+        return $data;
+    }
+
+
 }
+
