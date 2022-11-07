@@ -33,7 +33,7 @@ class promotionController extends Controller
 
     public function ManyToMany(){
 
-          $user = promotion::find(1)->apprenant;
+          $user = promotion::find(2)->apprenant;
           return $user;
     }
 }
