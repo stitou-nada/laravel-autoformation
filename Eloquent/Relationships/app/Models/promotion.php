@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class promotion extends Model
-{    
+{
   protected $table = 'promotion';
-
+ 
       // one to one
       function HasOneapprenant(){
         return $this->hasOne(apprenant::class);
