@@ -2,35 +2,20 @@
 
 namespace App\Http\Controllers;
 use App\Models\promotion;
-use App\Models\apprenant;
 
 use Illuminate\Http\Request;
 
 class PromotionController extends Controller
 {
-    // one to one
-    public function hasOne(){
-        $data = promotion::find(1)->hasOneApprenant;
-        return $data;
-    }
 
-    // belongsTo
+// one to one
 
-    public function belongsTo(){
+public function hasOne(){
 
-        $data = apprenant::find(1);
-        $data->promotion;
+    $data = promotion::find(1)->oneApprenant;
 
-        return $data;
-    }
-
-    // one TO Many
-
-    public function hasMany(){
-        $data = promotion::find(1);
-        $data->hasManyApprenant;
-        return $data;
-    }
+    return $data;
+}
 
 
 }

@@ -17,13 +17,6 @@ use App\Http\Controllers\PromotionController;
 Route::get('/', function () {
     return view('welcome');
 });
-// one to one
+
 Route::get('/hasOne',[PromotionController::class,'hasOne']);
 
-// belongsTo
-
-Route::get('/belongsTo',[PromotionController::class,'belongsTo']);
-
-// one to many
-
-Route::get('/hasMany',[PromotionController::class,'hasMany']);
