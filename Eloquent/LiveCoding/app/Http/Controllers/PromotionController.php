@@ -21,7 +21,7 @@ public function hasOne(){
   public function belongsTo(){
     $data = apprenant::find(1);
     $data->apprenant;
-
+    
     return view ('index',compact('data'));
 }
 

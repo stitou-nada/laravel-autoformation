@@ -15,6 +15,9 @@
             <td>{{$data->Name}}</td>
             <td>{{$data->Prenom}}</td>
             <td>{{$data->Email}}</td>
+
+
+            
             <td>{{$data->promotion->name}}</td>
         </tr>
     </tbody>
