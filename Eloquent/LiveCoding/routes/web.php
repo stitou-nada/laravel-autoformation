@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PromotionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// one to one
+Route::get('/hasOne',[PromotionController::class,'hasOne']);
+
+// belongsTo
+
+Route::get('/belongsTo',[PromotionController::class,'belongsTo']);
