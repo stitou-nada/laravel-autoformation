@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class tacheController extends Controller
 {
     public  function Afficher(){
-
+ 
         return response()->json(tache::all());
     }
 
