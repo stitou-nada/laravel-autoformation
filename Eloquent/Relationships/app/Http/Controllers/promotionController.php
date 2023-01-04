@@ -27,13 +27,13 @@ class promotionController extends Controller
 
     public function belongsTo()
     {
-        $data = apprenant::find(3);
-        return $data->promotion  ;
+        $data = apprenant::find(1);
+        return $data->promotion;
     }
 
     public function ManyToMany(){
 
-          $user = promotion::find(3)->apprenant;
-            return $user;
+          $user = promotion::find(2)->apprenant;
+          return $user;
     }
 }
