@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\tacheController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/tache',[tacheController::class,'index']);
+Route::post('/store',[tacheController::class,"store"]);
+Route::get('/edit/{id}',[tacheController::class,'edit']);
+Route::put('/update/{id}',[tacheController::class,"update"]);
+Route::delete('/delete/{id}',[tacheController::class,"destroy"]);
