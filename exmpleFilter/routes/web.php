@@ -1,10 +1,7 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\PaginationController;
-use App\Http\Controllers\ProductFilterController;
+
 use App\Http\Controllers\tacheController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,9 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// Route::get('/pagination',[tacheController::class,'index']);
-// Route::post('pagination/fetch',[tacheController::class,'fetche'])->name('pagination.fetche');
+Route::get('/pagination',[tacheController::class,'index']);
+Route::post('pagination/fetch',[tacheController::class,'fetch'])->name('pagination.fetch');
 
 
 
-Route::get('/', [HomeController::class,"index"]);

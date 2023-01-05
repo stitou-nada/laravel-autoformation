@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class tache extends Model
 {
     use HasFactory;
-    protected $table = "tache";
+    protected $table = "Preparation_tache";
     public $timestamps= false;
     protected $fillable = [
-        'name'
-        
+        'Nom_tache',
+        'Duree',
+
     ];
 }
