@@ -14,9 +14,6 @@ class tacheController extends Controller
      */
     public function index()
     {
-
-        
-
         return response()->json(tache::all());
 
     }
